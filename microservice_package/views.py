@@ -1,4 +1,4 @@
-from python_microservice_package import app
+from microservice_package import app
 
 @app.route('/')
 def index():
