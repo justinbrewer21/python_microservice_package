@@ -10,7 +10,12 @@ In addition for development the `build_and_start.sh` automates the deployment to
 This command builds a docker image named as the project name and tags the image with latest. In a web browser navigate to http://127.0.0.1:5000
 
 #### Running the project locally
-To run the project locally open a terminal and navigate to the project directory. The following commands will install Python package dependencies. For this reason it is recommended to activate a virtual environment via a package manager such as Anaconda or Virtual Environment in the terminal before running the following:
+To run the project locally open a terminal and navigate to the project directory. In order to run locally the following environment variable need to be set:
+```buildoutcfg
+export FLASK_APP=microservice_package
+export FLASK_ENV=development
+```
+Flask properties can be set using a `.flaskenv` file in the project directory, see docs if you prefer that route. The following commands will install Python package dependencies. For this reason it is recommended to activate a virtual environment via a package manager such as Anaconda or Virtual Environment in the terminal before running the following:
 
 ```buildoutcfg
 pip install -e .
